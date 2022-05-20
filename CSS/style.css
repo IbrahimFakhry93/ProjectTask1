@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: roboto;
+    src: url(../Fonts/Roboto-Regular.ttf);
+}
+:root{
+    --mainColor:#0078ff;
+    --mainTextColor: #4e4e4e;
+    --mainTitleColor:#212529;
+    --mainHomeColor:#fff;
+    --mainFontFamily:roboto;
+    --mainBackgroundColor:#dee2e6;
+    --mainProgressBarBg:#cde1f8;
+    --mainServiceColor:#fff;
+}
+body{
+    background-color: var(--mainBackgroundColor);
+}
+h2.title{
+    position:relative;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.875rem;
+}
+h2.title::after{
+    content:"";
+    position: absolute;
+    width:20%;
+    height:4px;
+    bottom:0;
+    left:0;
+    background-color:var(--mainColor);   
+}
+header.section-title{
+    position:relative;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.875rem;
+   
+}
+header.section-title h3{
+    font-size: 3rem;
+    font-weight: bold;
+   text-transform: uppercase;
+}
+header.section-title::after{
+    content:"";
+    position: absolute;
+    width:4%;
+    height:5px;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    background-color:var(--mainColor);   
+}
+.section-layer{
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity:0.7;
+    background-color: var(--mainColor);
+}
+
+/* <!-- S T A R T   N A V B A R   S E C T I O N --> */
+
+.navBar{
+    font-family: var(--mainFontFamily) !important;
+}
+
+.navbar ul.navbar-nav{
+    list-style: none !important;
+    /* background-color: aqua; */
+    width:60%;
+}
+.navbar ul li.nav-item{
+    padding:0;
+    text-align: left;
+    /* background-color: burlywood; */
+    
+}
+.navbar li.nav-item a{
+    position:relative;
+    padding:0 !important;
+    padding-bottom:0.4rem;
+    /* background-color: red; */
+    text-align: left ;
+    letter-spacing: 1px;
+   
+}
+.navbar li a:after{
+    content:"";
+    background-color: #fff;
+    width:0;
+    height:2px;
+    position: absolute;
+    left:0;
+    bottom:0;
+    transition:width 0.5s;
+}
+
+.navbar li a:hover::after{
+    width:80%;
+}
+
+.nav-item .drop-down-list a{
+    color:#1e1e1e;
+    text-decoration: none;
+}
+
+/* .nav-item .drop-down li{
+    position: relative;
+} */
+li.drop-down{
+    overflow: hidden;
+}
+.nav-item .drop-down-list{
+    position: absolute;
+    top:110%;
+    left:72%;
+    /* opacity:0; */
+    visibility: hidden;
+    /* display: none;  */
+}
+li.drop-down:hover  .drop-down-list{
+    top:90%;
+    opacity:1;
+    visibility: visible;
+    /* display: block; */
+    /* transition: all 1s; */
+}
+.nav-item .drop-down-list li{
+    margin-bottom: 5px;
+}
+.deep-drop-down{
+   overflow: hidden;
+}
+.deep-drop-down-list{
+   position: absolute;
+   top:0%;
+   left:-95%;
+   opacity:0;
+   /* visibility: hidden; */
+   padding:0.8rem;
+}
+li.deep-drop-down:hover .deep-drop-down-list{
+    opacity:1;
+    /* visibility: visible; */
+}
+
+.drop-down-list li a{
+    transition: all 0.5s;
+}
+.drop-down-list li:hover >a{
+    color:var(--mainColor);
+}
+
+/* <!--  S T A R T   H O M E   S E C T I O N --> */
+.home{
+    color:var(--mainHomeColor);
+    background-image: url(../images/hero-bg.jpg);
+    background-size:cover;
+    background-position: center center;
+}
+
+.home .layer{
+    height: 100%;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.home header{
+    position: absolute;
+    z-index: 1;
+}
+.home header h1{
+    font-size:4.5em;
+    position: relative;
+    padding-bottom: 5px;
+    /* background-color: #0078ff; */
+}
+
+
+.home header h1::after{
+    content:"|";
+    position: absolute;
+    bottom:-100%;
+    left:50%;
+    transform: translateX(-50%);
+    /* background-color: red; */
+    animation-name:typing;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes typing {
+    0%{
+        content:"|";
+    }
+    5%{
+        content:"F|";
+    }
+    10%{
+        content:"Fr|";
+    }
+    15%{
+        content:"Fre|";
+    }
+    20%{
+        content:"Free|";
+    }
+    25%{
+        content:"Freel|";
+    }
+    30%{
+        content:"Freela|";
+    }
+    35%{
+        content:"Freelan|";
+    }
+    40%{
+        content:"Freelanc|";
+    }
+    45%{
+        content:"Freelance|";
+    }
+    50%{
+        content:"Freelancer|";
+    }
+    55%{
+        content:"Freelancer|";
+    }
+    60%{
+        content:"Freelanc|";
+    }
+    60%{
+        content:"Freelan|";
+    }
+    70%{
+        content:"Freela|";
+    }
+    75%{
+        content:"Freel|";
+    }
+    80%{
+        content:"Free|";
+    }
+    85%{
+        content:"Fre|";
+    }
+    90%{
+        content:"Fr|";
+    }
+    95%{
+        content:"F|";
+    }
+    100%{
+        content:"|";
+    }
+    
+}
+@media  screen and (max-width:600px) {
+    .home{
+        font-size:10px;
+    }
+}
+
+/* <!--  E N D   H O M E   S E C T I O N --> */
+
+/* ====================================================================================== */
+
+
+/* <!--  MOH YASSER CONTRIBUTION    S T A R T    A B O U T - M E   S E C T I O N --> */
+
+
+
+
+/* <!-- MOH YASSER CONTRIBUTION   E N D   A B O U T - M E   S E C T I O N --> */
+/* ==================================================================================== */
+/* <!-- S T A R T   NIHAL CONTRIBUTION  S E R V I C E S  S E C T I O N --> */
+
+
+
+/* <!-- E N D   NIHAL CONTRIBUTION   S E R V I C E S  S E C T I O N --> */
+/* ========================================================================================== */
+/* <!-- S T A R T MOH MOSSAD CONTRIBUTION  C O U N T E R   S E C T I O N --> */
+
+
+
+ /* <!-- E N D  MOH MOSSAD  CONTRIBUTION C O U N T E R   S E C T I O N --> */
+
+
+ /* =================================================================================================== */
+ /* <!-- S T A R T AHMED MOUSTAFA CONTRIBUTION PORTOFOLIO   S E C T I O N --> */
+
+
+
+
+
+ /* <!-- E N D     AHMED MOUSTAFA CONTRIBUTION PORTOFOLIO   S E C T I O N --> */
