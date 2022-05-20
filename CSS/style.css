@@ -274,7 +274,44 @@ li.deep-drop-down:hover .deep-drop-down-list{
 
 
 /* <!--  MOH YASSER CONTRIBUTION    S T A R T    A B O U T - M E   S E C T I O N --> */
+.about-me .info-list span{
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 1.1rem;
+}
+.about-me .info-list li{
+    margin-bottom: 10px;
+ }
 
+.about-me .skills .w-85{
+    width:85%;
+}
+.about-me .skills .w-90{
+    width:90%;
+}
+.about-me .skills .progress-bg{
+    height:10px;
+    background-color: var(--mainProgressBarBg);
+}
+.about-me .skills .progess-bar-color{
+    background-color:var(--mainColor);
+    height:10px;
+}
+
+.about-me .skills .single-skill{
+    color:var(--mainTextColor);
+    margin-bottom: 5px;
+}
+.about-me p.title-skill{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color:var(--mainTitleColor);
+}
+.about-me p.paraghraph{
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--mainTitleColor)
+}
 
 
 
